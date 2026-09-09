@@ -1,0 +1,19 @@
+[project]
+name = "restaurant-booking-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "shushmitatiwari", email = "shushmita.tiwari@powerup.money" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "pipecat-ai>=1.8.1",
+]
+
+[project.scripts]
+restaurant-booking-agent = "restaurant_booking_agent:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
