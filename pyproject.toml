@@ -9,7 +9,7 @@ authors = [
 requires-python = ">=3.14"
 dependencies = [
     "loguru>=0.7.3",
-    "pipecat-ai[cartesia,daily,deepgram,groq,runner,silero,telnyx,websocket]>=1.8.1",
+    "pipecat-ai[cartesia,daily,deepgram,groq,runner,silero,telnyx,webrtc,websocket]>=1.8.1",
     "pymongo>=4.18.1",
     "python-dotenv>=1.2.3",
 ]
