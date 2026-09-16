@@ -330,9 +330,7 @@ from pipecat.frames.frames import LLMRunFrame, TTSSpeakFrame
 from pymongo import AsyncMongoClient
 from datetime import datetime, timezone
 from pymongo.errors import DuplicateKeyError
-from pipecat.serializers.telnyx import TelnyxFrameSerializer
-from pipecat.runner.utils import parse_telephony_websocket
-
+from pipecat.transports.livekit.transport import LiveKitParams
 load_dotenv(override=True)
 
 mongo_client = AsyncMongoClient(os.environ["MONGO_URI"])
@@ -567,6 +565,10 @@ transport_params = {
         audio_out_enabled=True, 
     ),
     "webrtc": lambda: TransportParams(
+        audio_in_enabled=True,
+        audio_out_enabled=True,
+    ),
+    "livekit": lambda: LiveKitParams(
         audio_in_enabled=True,
         audio_out_enabled=True,
     ),
